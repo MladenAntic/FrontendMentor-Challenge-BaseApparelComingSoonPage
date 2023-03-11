@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+
+:root {
+  --desaturated-red: hsl(0, 36%, 70%);
+  --soft-red: hsl(0, 93%, 68%);
+  --dark-grayish-red: hsl(0, 6%, 24%);
+  /* - Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%)
+    - Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%) */
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+body {
+  height: 100vh;
+  font-family: "Josefin Sans", sans-serif;
+  display: flex;
+  position: relative;
+}
+
+.wrapper {
+  width: 48%;
+  padding-top: 4.6875rem;
+  padding-left: 9.375rem;
+}
+
+.logo {
+  margin-bottom: 7.8125rem;
+}
+
+.title {
+  text-transform: uppercase;
+  font-size: 5rem;
+  font-weight: 600;
+  letter-spacing: 1.25rem;
+  margin-bottom: 1.875rem;
+  color: var(--dark-grayish-red);
+}
+
+.highlight {
+  color: var(--desaturated-red);
+  font-weight: 300;
+}
+
+.description {
+  margin-bottom: 1.875rem;
+  color: var(--desaturated-red);
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+form {
+  position: relative;
+}
+
+input {
+  width: 100%;
+  padding: 1.25rem;
+  border-radius: 3.125rem;
+  border: 0.0625rem solid var(--desaturated-red);
+  margin-bottom: 0.625rem;
+  outline: none;
+  pointer-events: all;
+}
+
+input::placeholder {
+  color: var(--desaturated-red);
+}
+
+button {
+  display: grid;
+  place-items: center;
+  padding: 1.1875rem 3.125rem;
+  background: linear-gradient(to right, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  border: none;
+  outline: none;
+  border-radius: 3.125rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  pointer-events: all;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.5;
+}
+
+.icon-error {
+  position: absolute;
+  right: 27.5%;
+  top: 21%;
+
+  display: none;
+}
+
+.error-message {
+  color: var(--soft-red);
+  font-weight: 600;
+  margin-left: 1.25rem;
+
+  display: none;
+}
+
+#background {
+  width: 40%;
+  height: 100%;
+  background: url("images/hero-desktop.jpg") no-repeat center center/cover;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    text-align: left;
+    padding-left: 0;
+    padding-bottom: 1.5625rem;
+    width: 85%;
+    margin: 0 auto;
+  }
+
+  .logo {
+    margin-top: -3rem;
+    margin-bottom: 31.25rem;
+  }
+
+  .title {
+    font-size: 4rem;
+    text-align: center;
+    letter-spacing: 0.3125rem;
+  }
+
+  .description {
+    text-align: center;
+  }
+
+  input {
+    font-size: 0.875rem;
+  }
+
+  .icon-error {
+    right: 35%;
+  }
+
+  button {
+    padding: 1.1875rem 2.8125rem;
+  }
+
+  #background {
+    background: url("images/hero-mobile.jpg") no-repeat center center/cover;
+    width: 100%;
+    height: 45%;
+    top: 12.5%;
+  }
+}
+
+@media screen and (width: 280px) {
+    .logo {
+        margin-bottom: 22.8125rem;
+    }
+
+    .title {
+        font-size: 3rem;
+    }
+
+    input {
+        padding: 0.625rem;
+        font-size: 0.75rem;
+    }
+
+    button {
+        padding: 0.5625rem 1.25rem;
+    }
+
+    .icon-error {
+        top: 10%;
+        right: 27.5%;
+    }
+
+    .error-message {
+        margin-left: 0.625rem;
+    }
+}
+
+@media screen and (width: 360px) {
+    .logo {
+        margin-bottom: 25rem;
+    }
+}
+
+@media screen and (width: 375px) {
+    .logo {
+        margin-bottom: 23.4375rem;
+    }
+}
+
+@media screen and (width: 540px) {
+    .logo {
+        margin-bottom: 25rem;
+    }
+
+    .icon-error {
+        right: 26%;
+    }
+}
+
+@media screen and (width: 768px) {
+    .logo {
+        margin-top: -1.875rem;
+        margin-bottom: 34.375rem;
+    }
+
+    .icon-error {
+        right: 20%;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+    .wrapper {
+        padding-left: 4.6875rem;
+    }
+
+    .title {
+        font-size: 4rem;
+        letter-spacing: 0.625rem;
+    }
+
+    input {
+        font-size: 0.875rem;
+    }
+
+    .icon-error {
+        right: 40%;
+    }
+}
